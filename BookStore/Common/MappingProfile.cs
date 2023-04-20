@@ -12,6 +12,7 @@ using BookStore.Application.BookOperations.GetBooks;
 using BookStore.Application.AuthorOperations.Queries.GetAuthors;
 using BookStore.Application.AuthorOperations.Queries.GetAuthorDetail;
 using BookStore.Application.AuthorOperations.Commands.CreateAuthor;
+using BookStore.Application.BookOperations.CreateBook;
 
 namespace BookStore.Common
 {

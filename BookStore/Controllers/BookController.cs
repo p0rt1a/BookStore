@@ -12,8 +12,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using static BookStore.Application.BookOperations.CreateBook.CreateBookCommand;
-using static BookStore.Application.BookOperations.UpdateBook.UpdateBookCommand;
 
 namespace BookStore.Controllers
 {
@@ -21,10 +19,10 @@ namespace BookStore.Controllers
     [Route("[controller]s")]
     public class BookController : ControllerBase
     {
-        private readonly BookStoreDbContext _context;
+        private readonly IBookStoreDbContext _context;
         private readonly IMapper _mapper;
 
-        public BookController(BookStoreDbContext context, IMapper mapper)
+        public BookController(IBookStoreDbContext context, IMapper mapper)
         {
             _context = context;
             _mapper = mapper;

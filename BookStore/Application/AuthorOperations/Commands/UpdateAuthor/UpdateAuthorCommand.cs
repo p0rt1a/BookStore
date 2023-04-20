@@ -9,12 +9,12 @@ namespace BookStore.Application.AuthorOperations.Commands.UpdateAuthor
 {
     public class UpdateAuthorCommand
     {
-        private readonly BookStoreDbContext _dbContext;
+        private readonly IBookStoreDbContext _dbContext;
         private readonly IMapper _mapper;
         public UpdateAuthorModel Model { get; set; }
         public int AuthorId { get; set; }
 
-        public UpdateAuthorCommand(BookStoreDbContext dbContext, IMapper mapper)
+        public UpdateAuthorCommand(IBookStoreDbContext dbContext, IMapper mapper)
         {
             _dbContext = dbContext;
             _mapper = mapper;
